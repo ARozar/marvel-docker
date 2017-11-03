@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3002'
+    environment:
+      - MONGO_CONNECTION=mongodb://mongo:27017/marvel
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    volumes: 
+      - ~/mongodata:/data/db
