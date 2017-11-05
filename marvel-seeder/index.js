@@ -8,6 +8,8 @@ var marvel = api.createClient({
 
 dbConfig(downloadAll);  
 
+process.exit();
+
 async function downloadAll() {
 
   let count = 0;
